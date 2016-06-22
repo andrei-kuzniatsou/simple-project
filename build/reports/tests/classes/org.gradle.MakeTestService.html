@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class org.gradle.MakeTestService</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class org.gradle.MakeTestService</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.gradle.html">org.gradle</a> &gt; MakeTestService</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.305s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">test</td>
+<td>0.662s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUpdate</td>
+<td>0.643s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>INFO org.springframework.test.context.support.DefaultTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+INFO org.springframework.test.context.support.DefaultTestContextBootstrapper: Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+INFO org.springframework.test.context.support.DefaultTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@138ada8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@c20017, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c678b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@e81f0c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@37ba14]
+INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [spring/context.xml]
+INFO org.springframework.context.support.GenericApplicationContext: Refreshing org.springframework.context.support.GenericApplicationContext@11691ec: startup date [Wed Jun 22 07:08:36 EET 2016]; root of context hierarchy
+INFO org.springframework.context.support.PropertySourcesPlaceholderConfigurer: Loading properties file from class path resource [settings.properties]
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@1101ebe testClass = MakeTestService, testInstance = org.gradle.MakeTestService@c93184, testMethod = test@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@17b7f96 testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@3a1456]; rollback [true]
+DEBUG org.gradle.dao.MakeDao.findAll: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE, model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id 
+DEBUG org.gradle.dao.MakeDao.findAll: ==&gt; Parameters: 
+DEBUG org.gradle.dao.MakeDao.findAll: &lt;==      Total: 0
+DEBUG org.gradle.dao.MakeDao.create: ==&gt;  Preparing: INSERT INTO public.make (name) VALUES (?) 
+DEBUG org.gradle.dao.MakeDao.create: ==&gt; Parameters: VW(String)
+DEBUG org.gradle.dao.MakeDao.create: &lt;==    Updates: 1
+DEBUG org.gradle.dao.ModelDao.create: ==&gt;  Preparing: INSERT INTO public.model (name, start_date, end_date, make_id) VALUES (?, ?, ?, ?) 
+DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: Golf(String), 1999-01-01 07:08:38.499(Timestamp), 2003-01-01 07:08:38.499(Timestamp), 28(Long)
+DEBUG org.gradle.dao.ModelDao.create: &lt;==    Updates: 1
+DEBUG org.gradle.dao.MakeDao.read: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE, model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id WHERE make.id=? 
+DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 28(Long)
+DEBUG org.gradle.dao.MakeDao.read: &lt;==      Total: 1
+DEBUG org.gradle.dao.MakeDao.findAll: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE, model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id 
+DEBUG org.gradle.dao.MakeDao.findAll: ==&gt; Parameters: 
+DEBUG org.gradle.dao.MakeDao.findAll: &lt;==      Total: 1
+DEBUG org.gradle.dao.ModelDao.deleteByMakeId: ==&gt;  Preparing: DELETE FROM public.model WHERE make_id=? 
+DEBUG org.gradle.dao.ModelDao.deleteByMakeId: ==&gt; Parameters: 28(Long)
+DEBUG org.gradle.dao.ModelDao.deleteByMakeId: &lt;==    Updates: 1
+DEBUG org.gradle.dao.MakeDao.delete: ==&gt;  Preparing: DELETE FROM public.make WHERE id=? 
+DEBUG org.gradle.dao.MakeDao.delete: ==&gt; Parameters: 28(Long)
+DEBUG org.gradle.dao.MakeDao.delete: &lt;==    Updates: 1
+DEBUG org.gradle.dao.MakeDao.read: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE, model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id WHERE make.id=? 
+DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 28(Long)
+DEBUG org.gradle.dao.MakeDao.read: &lt;==      Total: 0
+DEBUG org.gradle.dao.MakeDao.findAll: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE, model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id 
+DEBUG org.gradle.dao.MakeDao.findAll: ==&gt; Parameters: 
+DEBUG org.gradle.dao.MakeDao.findAll: &lt;==      Total: 0
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@1101ebe testClass = MakeTestService, testInstance = org.gradle.MakeTestService@c93184, testMethod = test@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@17b7f96 testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@1101ebe testClass = MakeTestService, testInstance = org.gradle.MakeTestService@5c18a8, testMethod = testUpdate@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@17b7f96 testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@3a1456]; rollback [true]
+DEBUG org.gradle.dao.MakeDao.create: ==&gt;  Preparing: INSERT INTO public.make (name) VALUES (?) 
+DEBUG org.gradle.dao.MakeDao.create: ==&gt; Parameters: VW(String)
+DEBUG org.gradle.dao.MakeDao.create: &lt;==    Updates: 1
+DEBUG org.gradle.dao.ModelDao.create: ==&gt;  Preparing: INSERT INTO public.model (name, start_date, end_date, make_id) VALUES (?, ?, ?, ?) 
+DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: GOLF IV(String), 1999-01-01 07:08:38.952(Timestamp), 2003-01-01 07:08:38.952(Timestamp), 29(Long)
+DEBUG org.gradle.dao.ModelDao.create: &lt;==    Updates: 1
+DEBUG org.gradle.dao.ModelDao.create: ==&gt;  Preparing: INSERT INTO public.model (name, start_date, end_date, make_id) VALUES (?, ?, ?, ?) 
+DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: POLO(String), 1997-01-01 07:08:38.952(Timestamp), 2015-01-01 07:08:38.952(Timestamp), 29(Long)
+DEBUG org.gradle.dao.ModelDao.create: &lt;==    Updates: 1
+DEBUG org.gradle.dao.MakeDao.update: ==&gt;  Preparing: UPDATE public.make SET name=? WHERE id=? 
+DEBUG org.gradle.dao.MakeDao.update: ==&gt; Parameters: VW(String), 29(Long)
+DEBUG org.gradle.dao.MakeDao.update: &lt;==    Updates: 1
+DEBUG org.gradle.dao.ModelDao.findByMakeId: ==&gt;  Preparing: SELECT id, name, start_date, end_date FROM public.model WHERE make_id=? 
+DEBUG org.gradle.dao.ModelDao.findByMakeId: ==&gt; Parameters: 29(Long)
+DEBUG org.gradle.dao.ModelDao.findByMakeId: &lt;==      Total: 2
+DEBUG org.gradle.dao.ModelDao.update: ==&gt;  Preparing: UPDATE public.model SET name=?, start_date=?, end_date=? WHERE id=? 
+DEBUG org.gradle.dao.ModelDao.update: ==&gt; Parameters: POLO(String), 1997-01-01 07:08:38.952(Timestamp), 2015-01-01 07:08:38.952(Timestamp), 44(Long)
+DEBUG org.gradle.dao.ModelDao.update: &lt;==    Updates: 1
+DEBUG org.gradle.dao.ModelDao.deleteOrphanModel: ==&gt;  Preparing: DELETE FROM public.model WHERE id IN ( ? ) 
+DEBUG org.gradle.dao.ModelDao.deleteOrphanModel: ==&gt; Parameters: 43(Long)
+DEBUG org.gradle.dao.ModelDao.deleteOrphanModel: &lt;==    Updates: 1
+DEBUG org.gradle.dao.ModelDao.update: ==&gt;  Preparing: UPDATE public.model SET name=?, start_date=?, end_date=? WHERE id=? 
+DEBUG org.gradle.dao.ModelDao.update: ==&gt; Parameters: POLO(String), 1997-01-01 07:08:38.952(Timestamp), 2015-01-01 07:08:38.952(Timestamp), 44(Long)
+DEBUG org.gradle.dao.ModelDao.update: &lt;==    Updates: 1
+DEBUG org.gradle.dao.MakeDao.read: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE, model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id WHERE make.id=? 
+DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 29(Long)
+DEBUG org.gradle.dao.MakeDao.read: &lt;==      Total: 1
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@1101ebe testClass = MakeTestService, testInstance = org.gradle.MakeTestService@5c18a8, testMethod = testUpdate@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@17b7f96 testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 22.06.2016 7:08:40</p>
+</div>
+</div>
+</body>
+</html>

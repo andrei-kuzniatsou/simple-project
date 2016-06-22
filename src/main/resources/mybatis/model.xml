@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.gradle.dao.ModelDao">
+
+    <insert id="create" parameterType="model" keyProperty="id">
+        INSERT INTO
+            public.model (name, start_date, end_date, make_id)
+        VALUES
+            (#{name}, #{startDate}, #{endDate}, #{make.id})
+    </insert>
+
+    <update id="update" parameterType="model">
+        UPDATE
+            public.model
+        SET
+            name=#{name},
+            start_date=#{startDate},
+            end_date=#{endDate}
+        WHERE
+            id=#{id}
+    </update>
+
+    <select id="findByMakeId" resultType="model" parameterType="long">
+        SELECT
+            id,
+            name,
+            start_date,
+            end_date
+        FROM
+            public.model
+        WHERE
+            make_id=#{makeId}
+    </select>
+
+    <delete id="deleteOrphanModel">
+        DELETE FROM
+            public.model
+        WHERE id IN
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+    
+    <delete id="deleteByMakeId">
+        DELETE FROM
+            public.model
+        WHERE
+            make_id=#{makeId}
+    </delete>
+
+</mapper>
+

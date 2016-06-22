@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.gradle.dao.MakeDao">
+
+    <resultMap id="makeResultMap" type="make">
+        <id property="id" column="ID"/>
+        <result property="name" column="NAME"/>
+        <collection property="models" ofType="model">
+            <id property="id" column="MODEL_ID"/>
+            <result property="name" column="MODEL_NAME"/>
+            <result property="startDate" column="MODEL_START_DATE"/>
+            <result property="endDate" column="MODEL_END_DATE"/>
+        </collection>
+    </resultMap>
+
+    <!-- <sql id="makeSql">
+        SELECT
+            make.id,
+            make.name,
+            model.id AS MODEL_ID,
+            model.name AS MODEL_NAME,
+            model.start_date AS MODEL_START_DATE,
+            model.end_date AS MODEL_END_DATE
+        FROM
+           public.make make
+        INNER JOIN
+            public.model model ON make.id = model.make_id
+    </sql>
+
+    <insert id="create" parameterType="make" keyProperty="id">
+        INSERT INTO
+            public.make (name)
+        VALUES
+            (#{name})
+    </insert>
+
+    <select id="read" resultMap="makeResultMap" parameterType="long">
+        <include refid="makeSql"/>
+        WHERE
+            make.id=#{id} 
+    </select>
+
+    <update id="update" parameterType="make">
+        UPDATE
+            public.make
+        SET
+            name=#{name}
+        WHERE
+            id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="long">
+        DELETE FROM
+            public.make
+        WHERE
+            id=#{id}
+    </delete>
+
+    <select id="findAll" resultMap="makeResultMap">
+        <include refid="makeSql"/>
+    </select> -->
+
+</mapper>
+
