@@ -43,7 +43,7 @@
             #{item}
         </foreach>
     </delete>
-    
+
     <delete id="deleteByMakeId">
         DELETE FROM
             public.model

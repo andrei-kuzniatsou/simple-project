@@ -1,21 +1,28 @@
 package org.gradle.domain;
 
 /**
- * Named entity
- * 
+ * Named entity.
  * @author Artsiom_Buyevich
- *
  */
 public class NamedEntity extends Entity {
 
-	private String name;
+    /**
+     * name of entity.
+     */
+    private String name;
 
-	public String getName() {
-		return name;
-	}
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }

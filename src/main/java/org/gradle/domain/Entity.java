@@ -1,21 +1,28 @@
 package org.gradle.domain;
 
 /**
- * Entity
- * 
+ * Entity.
  * @author Artsiom_Buyevich
- *
  */
 public class Entity {
 
-	private Long id;
+    /**
+     * key entity.
+     */
+    private Long id;
 
-	public Long getId() {
-		return id;
-	}
+    /**
+     * @return the id
+     */
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    /**
+     * @param id the id to set
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 }
