@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'liquibase'
 
 sourceCompatibility = 1.8
 version = '1.0'
@@ -41,3 +42,34 @@ uploadArchives {
        }
     }
 }
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.postgresql:postgresql:9.2-1003-jdbc4'
+        classpath 'org.liquibase:liquibase-core:2.0.3'
+        classpath ('com.augusttechgroup:gradle-liquibase-plugin:0.7') {
+            exclude group: 'org.liquibase', module: 'liquibase-core'
+        }
+    }
+}
+
+liquibase {
+    changelogs { 
+        main {
+            file = file('liquibase/db-changelog.xml')
+        }
+    }
+    databases {
+        postgresql {
+            
+            url = "jdbc:postgresql://localhost:5432/make"
+            username = "postgres"
+            password = "postgres"
+        }
+    }
+    defaultDatabase = databases.postgresql
+}
+
