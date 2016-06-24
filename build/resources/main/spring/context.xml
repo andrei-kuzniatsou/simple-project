@@ -13,7 +13,7 @@
     <context:component-scan base-package="org.gradle.service" />
 
     <context:property-placeholder location='settings.properties'/>
-    
+
     <tx:annotation-driven/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"

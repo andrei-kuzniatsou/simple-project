@@ -16,7 +16,7 @@
         </collection>
     </resultMap>
 
-    <sql id="makeSql">
+    <!-- <sql id="makeSql">
         SELECT
             make.id,
             make.name,
@@ -61,7 +61,7 @@
 
     <select id="findAll" resultMap="makeResultMap">
         <include refid="makeSql"/>
-    </select>
+    </select> -->
 
 </mapper>
 
