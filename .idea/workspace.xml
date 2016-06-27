@@ -1,65 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc3ef67d-27a9-4602-958b-03a1429afeb0" name="Default" comment="Add validate make.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_classmate_1_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_validator_5_2_4_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/org/gradle/MakeTestService.class" afterPath="$PROJECT_DIR$/bin/org/gradle/MakeTestService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/org/gradle/service/MakeServiceImpl.class" afterPath="$PROJECT_DIR$/bin/org/gradle/service/MakeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/gradle/domain/Make.class" afterPath="$PROJECT_DIR$/build/classes/main/org/gradle/domain/Make.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/gradle/domain/Model.class" afterPath="$PROJECT_DIR$/build/classes/main/org/gradle/domain/Model.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/gradle/domain/NamedEntity.class" afterPath="$PROJECT_DIR$/build/classes/main/org/gradle/domain/NamedEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/gradle/service/MakeServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/main/org/gradle/service/MakeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/org/gradle/MakeTestService.class" afterPath="$PROJECT_DIR$/build/classes/test/org/gradle/MakeTestService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/cobertura/cobertura.ser" afterPath="$PROJECT_DIR$/build/cobertura/cobertura.ser" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/cobertura/coberturaInput.ser" afterPath="$PROJECT_DIR$/build/cobertura/coberturaInput.ser" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/instrumented_classes/org/gradle/service/MakeServiceImpl.class" afterPath="$PROJECT_DIR$/build/instrumented_classes/org/gradle/service/MakeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/output.bin" afterPath="$PROJECT_DIR$/build/test-results/binary/test/output.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/output.bin.idx" afterPath="$PROJECT_DIR$/build/test-results/binary/test/output.bin.idx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" afterPath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.checkstyle" afterPath="$PROJECT_DIR$/.checkstyle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/simple-project_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/simple-project_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/simple-project_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/simple-project_test.iml" />
+    <list default="true" id="dc3ef67d-27a9-4602-958b-03a1429afeb0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/gradle/org.springsource.ide.eclipse.gradle.core.import.prefs" afterPath="$PROJECT_DIR$/.settings/gradle/org.springsource.ide.eclipse.gradle.core.import.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/coverage.xml" afterPath="$PROJECT_DIR$/build/reports/cobertura/coverage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/frame-packages.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/frame-packages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/frame-sourcefiles-org.gradle.service.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/frame-sourcefiles-org.gradle.service.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/frame-sourcefiles.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/frame-sourcefiles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/frame-summary-org.gradle.dao.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/frame-summary-org.gradle.dao.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/frame-summary-org.gradle.domain.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/frame-summary-org.gradle.domain.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/frame-summary-org.gradle.service.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/frame-summary-org.gradle.service.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/frame-summary.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/frame-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.dao.CrudDao.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.dao.CrudDao.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.dao.MakeDao.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.dao.MakeDao.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.dao.ModelDao.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.dao.ModelDao.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.domain.Entity.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.domain.Entity.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.domain.Make.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.domain.Make.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.domain.Model.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.domain.Model.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.domain.NamedEntity.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.domain.NamedEntity.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.service.CrudService.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.service.CrudService.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.service.MakeService.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.service.MakeService.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.service.MakeServiceImpl.html" afterPath="$PROJECT_DIR$/build/reports/cobertura/org.gradle.service.MakeServiceImpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/org.gradle.MakeTestService.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/org.gradle.MakeTestService.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/packages/org.gradle.html" afterPath="$PROJECT_DIR$/build/reports/tests/packages/org.gradle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-org.gradle.MakeTestService.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-org.gradle.MakeTestService.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gradle/exception/NoRequiredAttributesException.java" afterPath="$PROJECT_DIR$/src/main/java/org/gradle/exception/NoRequiredAttributesException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gradle/service/MakeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/gradle/service/MakeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/gradle/MakeTestService.java" afterPath="$PROJECT_DIR$/src/test/java/org/gradle/MakeTestService.java" />
     </list>
     <ignored path="simple-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,7 +69,7 @@
       <file leaf-file-name="MakeTestService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/gradle/MakeTestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
+            <state relative-caret-position="2380">
               <caret line="162" column="46" selection-start-line="162" selection-start-column="46" selection-end-line="162" selection-end-column="46" />
               <folding>
                 <element signature="e#4670#4671#0" expanded="true" />
@@ -1455,6 +1398,14 @@
       <option name="presentableId" value="Default" />
       <updated>1466690985176</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add validate make.">
+      <created>1467013442698</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1467013442698</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1859,7 +1810,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/gradle/MakeTestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="2380">
           <caret line="162" column="46" selection-start-line="162" selection-start-column="46" selection-end-line="162" selection-end-column="46" />
           <folding>
             <element signature="e#4670#4671#0" expanded="true" />
