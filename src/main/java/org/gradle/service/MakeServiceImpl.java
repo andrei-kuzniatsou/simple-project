@@ -7,6 +7,7 @@ import org.gradle.dao.MakeDao;
 import org.gradle.dao.ModelDao;
 import org.gradle.domain.Make;
 import org.gradle.domain.Model;
+import org.gradle.exception.NoRequiredAttributesException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,11 +26,39 @@ public class MakeServiceImpl implements MakeService {
 
     @Override
     @Transactional
-    public void save(Make entity) {
-        if (entity.getId() == null) {
-            create(entity);
+    public void save(Make make) {
+        if (make == null) {
+            throw new IllegalArgumentException();
+        }
+        validate(make);
+        if (make.getId() == null) {
+            create(make);
         } else {
-            update(entity);
+            update(make);
+        }
+    }
+
+    private void validate(Make make) {
+        List<String> errors = new ArrayList<>();
+        if (make.getName() == null || make.getName().trim().isEmpty()) {
+            errors.add("make.name");
+        }
+        if (make.getModels() == null || make.getModels().isEmpty()) {
+            errors.add("make.models");
+        } else {
+            for (Model model : make.getModels()) {
+                if (model.getName() == null
+                        || model.getName().trim().isEmpty()) {
+                    errors.add("model.name");
+                }
+                if (model.getStartDate() == null) {
+                    errors.add("model.startDate");
+                }
+            }
+        }
+        if (!errors.isEmpty()) {
+            throw new NoRequiredAttributesException("null value in field(s):"
+                    + errors);
         }
     }
 
@@ -39,12 +68,10 @@ public class MakeServiceImpl implements MakeService {
      */
     private void create(Make make) {
         makeDao.create(make);
-        if (make.getModels() != null) {
             for (Model model : make.getModels()) {
                 model.setMake(make);
                 modelDao.create(model);
             }
-        }
     }
 
     /**
@@ -60,7 +87,6 @@ public class MakeServiceImpl implements MakeService {
         for (Model model : oldModels) {
             ids.add(model.getId());
         }
-        if (make.getModels() != null) {
             for (Model model : make.getModels()) {
                 model.setMake(make);
                 if (model.getId() == null) {
@@ -73,7 +99,6 @@ public class MakeServiceImpl implements MakeService {
             if (ids.size() > 0) {
                 modelDao.deleteOrphanModel(ids);
             }
-        }
     }
 
     @Override

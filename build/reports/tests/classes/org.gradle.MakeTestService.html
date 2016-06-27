@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">9</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.171s</div>
+<div class="counter">0.200s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,47 @@
 </thead>
 <tr>
 <td class="success">test</td>
-<td>0.171s</td>
+<td>0.109s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSaveMakeWhenMakeIsNull</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUpdateModelOfMake</td>
+<td>0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testValidateMakeWhenHasOnlyEmptyName</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testValidateMakeWhenHasOnlyFillName</td>
+<td>0.074s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testValidateMakeWhenModelHasAllFieldsIsNull</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testValidateMakeWhenModelsIsEmpty</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testValidateMakeWhenNameAndModelsIsNull</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testValidateMakeWhenNameIsEmptyAndModelsIsNull</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -91,7 +131,7 @@
 INFO org.springframework.test.context.support.DefaultTestContextBootstrapper: Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/web/context/request/RequestAttributes]
 INFO org.springframework.test.context.support.DefaultTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1beebe57, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3d39e4ae, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3f135154, org.springframework.test.context.transaction.TransactionalTestExecutionListener@746d914d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a9f9591]
 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [spring/context.xml]
-INFO org.springframework.context.support.GenericApplicationContext: Refreshing org.springframework.context.support.GenericApplicationContext@79908ab5: startup date [Fri Jun 24 16:28:35 MSK 2016]; root of context hierarchy
+INFO org.springframework.context.support.GenericApplicationContext: Refreshing org.springframework.context.support.GenericApplicationContext@79908ab5: startup date [Mon Jun 27 10:28:12 MSK 2016]; root of context hierarchy
 INFO org.springframework.context.support.PropertySourcesPlaceholderConfigurer: Loading properties file from class path resource [settings.properties]
 [DEBUG] Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
 [DEBUG] Class not found: org.jboss.vfs.VFS
@@ -148,7 +188,15 @@ INFO org.springframework.context.support.PropertySourcesPlaceholderConfigurer: L
 [DEBUG] Parsed configuration file: 'class path resource [spring/mybatis.xml]'
 [DEBUG] Parsed mapper file: 'file [D:\project\simple-project\simple-project\build\resources\main\mybatis\make.xml]'
 [DEBUG] Parsed mapper file: 'file [D:\project\simple-project\simple-project\build\resources\main\mybatis\model.xml]'
-INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@6f84df23, testMethod = test@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@6f84df23, testMethod = testValidateMakeWhenHasOnlyFillName@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@6f84df23, testMethod = testValidateMakeWhenHasOnlyFillName@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@4ee73305, testMethod = testValidateMakeWhenModelsIsEmpty@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@4ee73305, testMethod = testValidateMakeWhenModelsIsEmpty@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@32c704c0, testMethod = testSaveMakeWhenMakeIsNull@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@32c704c0, testMethod = testSaveMakeWhenMakeIsNull@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@60fdc79, testMethod = testValidateMakeWhenModelHasAllFieldsIsNull@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@60fdc79, testMethod = testValidateMakeWhenModelHasAllFieldsIsNull@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@50f9b7a2, testMethod = test@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
 DEBUG org.gradle.dao.MakeDao.findAll: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE,model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id 
 DEBUG org.gradle.dao.MakeDao.findAll: ==&gt; Parameters: 
 DEBUG org.gradle.dao.MakeDao.findAll: &lt;==      Total: 0
@@ -156,45 +204,68 @@ DEBUG org.gradle.dao.MakeDao.create: ==&gt;  Preparing: INSERT INTO public.make 
 DEBUG org.gradle.dao.MakeDao.create: ==&gt; Parameters: VW(String)
 DEBUG org.gradle.dao.MakeDao.create: &lt;==    Updates: 1
 DEBUG org.gradle.dao.ModelDao.create: ==&gt;  Preparing: INSERT INTO public.model (name, start_date, end_date, make_id) VALUES (?, ?, ?, ?) 
-DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: GOLF IV(String), 1999-01-01 00:00:00.0(Timestamp), 2003-01-01 00:00:00.0(Timestamp), 6(Long)
+DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: GOLF IV(String), 1999-01-01 00:00:00.0(Timestamp), 2003-01-01 00:00:00.0(Timestamp), 30(Long)
 DEBUG org.gradle.dao.ModelDao.create: &lt;==    Updates: 1
 DEBUG org.gradle.dao.ModelDao.create: ==&gt;  Preparing: INSERT INTO public.model (name, start_date, end_date, make_id) VALUES (?, ?, ?, ?) 
-DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: POLO(String), 1997-01-01 00:00:00.0(Timestamp), 2015-01-01 00:00:00.0(Timestamp), 6(Long)
+DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: POLO(String), 1997-01-01 00:00:00.0(Timestamp), 2015-01-01 00:00:00.0(Timestamp), 30(Long)
 DEBUG org.gradle.dao.ModelDao.create: &lt;==    Updates: 1
 DEBUG org.gradle.dao.MakeDao.read: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE,model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id WHERE make.id=? 
-DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 6(Long)
+DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 30(Long)
 DEBUG org.gradle.dao.MakeDao.read: &lt;==      Total: 2
 DEBUG org.gradle.dao.MakeDao.update: ==&gt;  Preparing: UPDATE public.make SET name=? WHERE id=? 
-DEBUG org.gradle.dao.MakeDao.update: ==&gt; Parameters: Audi(String), 6(Long)
+DEBUG org.gradle.dao.MakeDao.update: ==&gt; Parameters: Audi(String), 30(Long)
 DEBUG org.gradle.dao.MakeDao.update: &lt;==    Updates: 1
 DEBUG org.gradle.dao.ModelDao.findByMakeId: ==&gt;  Preparing: SELECT id, name, start_date, end_date FROM public.model WHERE make_id=? 
-DEBUG org.gradle.dao.ModelDao.findByMakeId: ==&gt; Parameters: 6(Long)
+DEBUG org.gradle.dao.ModelDao.findByMakeId: ==&gt; Parameters: 30(Long)
 DEBUG org.gradle.dao.ModelDao.findByMakeId: &lt;==      Total: 2
 DEBUG org.gradle.dao.ModelDao.create: ==&gt;  Preparing: INSERT INTO public.model (name, start_date, end_date, make_id) VALUES (?, ?, ?, ?) 
-DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: 100(String), 1990-01-01 00:00:00.0(Timestamp), 2003-01-01 00:00:00.0(Timestamp), 6(Long)
+DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: 100(String), 1990-01-01 00:00:00.0(Timestamp), 2003-01-01 00:00:00.0(Timestamp), 30(Long)
 DEBUG org.gradle.dao.ModelDao.create: &lt;==    Updates: 1
 DEBUG org.gradle.dao.ModelDao.deleteOrphanModel: ==&gt;  Preparing: DELETE FROM public.model WHERE id IN ( ? , ? ) 
-DEBUG org.gradle.dao.ModelDao.deleteOrphanModel: ==&gt; Parameters: 16(Long), 17(Long)
+DEBUG org.gradle.dao.ModelDao.deleteOrphanModel: ==&gt; Parameters: 70(Long), 71(Long)
 DEBUG org.gradle.dao.ModelDao.deleteOrphanModel: &lt;==    Updates: 2
 DEBUG org.gradle.dao.MakeDao.read: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE,model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id WHERE make.id=? 
-DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 6(Long)
+DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 30(Long)
 DEBUG org.gradle.dao.MakeDao.read: &lt;==      Total: 1
 DEBUG org.gradle.dao.MakeDao.findAll: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE,model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id 
 DEBUG org.gradle.dao.MakeDao.findAll: ==&gt; Parameters: 
 DEBUG org.gradle.dao.MakeDao.findAll: &lt;==      Total: 1
 DEBUG org.gradle.dao.ModelDao.deleteByMakeId: ==&gt;  Preparing: DELETE FROM public.model WHERE make_id=? 
-DEBUG org.gradle.dao.ModelDao.deleteByMakeId: ==&gt; Parameters: 6(Long)
+DEBUG org.gradle.dao.ModelDao.deleteByMakeId: ==&gt; Parameters: 30(Long)
 DEBUG org.gradle.dao.ModelDao.deleteByMakeId: &lt;==    Updates: 1
 DEBUG org.gradle.dao.MakeDao.delete: ==&gt;  Preparing: DELETE FROM public.make WHERE id=? 
-DEBUG org.gradle.dao.MakeDao.delete: ==&gt; Parameters: 6(Long)
+DEBUG org.gradle.dao.MakeDao.delete: ==&gt; Parameters: 30(Long)
 DEBUG org.gradle.dao.MakeDao.delete: &lt;==    Updates: 1
 DEBUG org.gradle.dao.MakeDao.read: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE,model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id WHERE make.id=? 
-DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 6(Long)
+DEBUG org.gradle.dao.MakeDao.read: ==&gt; Parameters: 30(Long)
 DEBUG org.gradle.dao.MakeDao.read: &lt;==      Total: 0
 DEBUG org.gradle.dao.MakeDao.findAll: ==&gt;  Preparing: SELECT make.id, make.name, model.id AS MODEL_ID, model.name AS MODEL_NAME, model.start_date AS MODEL_START_DATE,model.end_date AS MODEL_END_DATE FROM public.make make INNER JOIN public.model model ON make.id = model.make_id 
 DEBUG org.gradle.dao.MakeDao.findAll: ==&gt; Parameters: 
 DEBUG org.gradle.dao.MakeDao.findAll: &lt;==      Total: 0
-INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@6f84df23, testMethod = test@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@50f9b7a2, testMethod = test@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@30daed7b, testMethod = testValidateMakeWhenNameAndModelsIsNull@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@30daed7b, testMethod = testValidateMakeWhenNameAndModelsIsNull@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@4a06d0ee, testMethod = testValidateMakeWhenHasOnlyEmptyName@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@4a06d0ee, testMethod = testValidateMakeWhenHasOnlyEmptyName@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@54df8ccc, testMethod = testUpdateModelOfMake@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+DEBUG org.gradle.dao.MakeDao.create: ==&gt;  Preparing: INSERT INTO public.make (name) VALUES (?) 
+DEBUG org.gradle.dao.MakeDao.create: ==&gt; Parameters: any make(String)
+DEBUG org.gradle.dao.MakeDao.create: &lt;==    Updates: 1
+DEBUG org.gradle.dao.ModelDao.create: ==&gt;  Preparing: INSERT INTO public.model (name, start_date, end_date, make_id) VALUES (?, ?, ?, ?) 
+DEBUG org.gradle.dao.ModelDao.create: ==&gt; Parameters: any model(String), 1970-01-01 00:00:00.0(Timestamp), 1981-12-02 00:00:00.0(Timestamp), 31(Long)
+DEBUG org.gradle.dao.ModelDao.create: &lt;==    Updates: 1
+DEBUG org.gradle.dao.MakeDao.update: ==&gt;  Preparing: UPDATE public.make SET name=? WHERE id=? 
+DEBUG org.gradle.dao.MakeDao.update: ==&gt; Parameters: any make(String), 31(Long)
+DEBUG org.gradle.dao.MakeDao.update: &lt;==    Updates: 1
+DEBUG org.gradle.dao.ModelDao.findByMakeId: ==&gt;  Preparing: SELECT id, name, start_date, end_date FROM public.model WHERE make_id=? 
+DEBUG org.gradle.dao.ModelDao.findByMakeId: ==&gt; Parameters: 31(Long)
+DEBUG org.gradle.dao.ModelDao.findByMakeId: &lt;==      Total: 1
+DEBUG org.gradle.dao.ModelDao.update: ==&gt;  Preparing: UPDATE public.model SET name=?, start_date=?, end_date=? WHERE id=? 
+DEBUG org.gradle.dao.ModelDao.update: ==&gt; Parameters: any update model(String), 1971-02-02 00:00:00.0(Timestamp), 1982-01-03 00:00:00.0(Timestamp), 73(Long)
+DEBUG org.gradle.dao.ModelDao.update: &lt;==    Updates: 1
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@54df8ccc, testMethod = testUpdateModelOfMake@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+INFO org.springframework.test.context.transaction.TransactionContext: Began transaction (1) for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@7121d0a7, testMethod = testValidateMakeWhenNameIsEmptyAndModelsIsNull@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74a53b59]; rollback [true]
+INFO org.springframework.test.context.transaction.TransactionContext: Rolled back transaction for test context [DefaultTestContext@453e3c6d testClass = MakeTestService, testInstance = org.gradle.MakeTestService@7121d0a7, testMethod = testValidateMakeWhenNameIsEmptyAndModelsIsNull@MakeTestService, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@76783dce testClass = MakeTestService, locations = '{classpath:spring/context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
 </pre>
 </span>
 </div>
@@ -206,7 +277,7 @@ INFO org.springframework.test.context.transaction.TransactionContext: Rolled bac
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 2.9</a> at Jun 24, 2016 4:28:37 PM</p>
+<a href="http://www.gradle.org">Gradle 2.9</a> at Jun 27, 2016 10:28:14 AM</p>
 </div>
 </div>
 </body>

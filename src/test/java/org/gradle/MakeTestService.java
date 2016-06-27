@@ -15,6 +15,7 @@ import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.gradle.domain.Make;
 import org.gradle.domain.Model;
+import org.gradle.exception.NoRequiredAttributesException;
 import org.gradle.service.MakeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -76,7 +77,91 @@ public class MakeTestService {
         if (firstFindAll != thirdFindAll) {
             fail("The collection size should have be the same as original");
         }
+    }
 
+    /**
+     * Validate make when name and models is null.
+     */
+    @Test(expected = NoRequiredAttributesException.class)
+    public void testValidateMakeWhenNameAndModelsIsNull() {
+        Make make = new Make();
+        makeService.save(make);
+    }
+
+    /**
+     * Validate make when name is empty and models is null.
+     */
+    @Test(expected = NoRequiredAttributesException.class)
+    public void testValidateMakeWhenNameIsEmptyAndModelsIsNull() {
+        Make make = new Make();
+        make.setName("");
+        makeService.save(make);
+    }
+
+    /**
+     * Validate make when models is empty.
+     */
+    @Test(expected = NoRequiredAttributesException.class)
+    public void testValidateMakeWhenModelsIsEmpty() {
+        Make make = createMake("any make");
+        make.setModels(new ArrayList<>());
+        makeService.save(make);
+    }
+
+    /**
+     * Validate make when model has all field is null
+     */
+    @Test(expected = NoRequiredAttributesException.class)
+    public void testValidateMakeWhenModelHasAllFieldsIsNull() {
+        Make make = createMakeWithOneModel("any make", null, null, null);
+        makeService.save(make);
+    }
+
+    /**
+     * Validate make when has only empty name.
+     */
+    @Test(expected = NoRequiredAttributesException.class)
+    public void testValidateMakeWhenHasOnlyEmptyName() {
+        Make make = createMakeWithOneModel("any make", "", null, null);
+        makeService.save(make);
+    }
+
+    /**
+     * Validate make when filled only name of model.
+     */
+    @Test(expected = NoRequiredAttributesException.class)
+    public void testValidateMakeWhenHasOnlyFillName() {
+        Make make = createMakeWithOneModel("any make", "any model", null, null);
+        makeService.save(make);
+    }
+
+    /**
+     * Check when make is null.
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void testSaveMakeWhenMakeIsNull() {
+        makeService.save(null);
+    }
+
+    /**
+     * Update model of make.
+     */
+    @Test
+    public void testUpdateModelOfMake() {
+        Make make = createMake("any make");
+        Model model = createModel("any model",
+                DateUtils.createDate(1, Calendar.JANUARY, 1970),
+                DateUtils.createDate(2, Calendar.DECEMBER, 1981));
+        make.setModels(new ArrayList<>(Arrays.asList(model)));
+        makeService.save(make);
+
+        Long modelId = model.getId();
+        Model updateModel = createModel("any update model",
+                DateUtils.createDate(2, Calendar.FEBRUARY, 1971),
+                DateUtils.createDate(3, Calendar.JANUARY, 1982));
+        updateModel.setId(modelId);
+        make.setModels(new ArrayList<>(Arrays.asList(updateModel)));
+        makeService.save(make);
     }
 
     /**
@@ -141,7 +226,8 @@ public class MakeTestService {
      * @param models2 second collection of models
      * @return true, if compare, else false
      */
-    private boolean compareCollections(Collection<Model> models1, Collection<Model> models2) {
+    private boolean compareCollections(Collection<Model> models1,
+            Collection<Model> models2) {
         if (models1.size() != models2.size()) {
             return false;
         }
